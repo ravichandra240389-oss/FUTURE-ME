@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Future Me · Career Railway</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚆</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Future Me · Career Railway Network</p>
+      <h1>Pick your line. Ride it station by station.</h1>
+      <p class="lede" id="profile-line">Loading profile…</p>
+      <ul class="chips" id="skills"></ul>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section aria-labelledby="h-network">
+      <h2 id="h-network">The network</h2>
+      <p class="muted">Every line starts from where you are today. Click a terminus to open its route.</p>
+      <div class="network-box"><svg id="network" role="img" aria-label="Network map of all career lines"></svg></div>
+    </section>
+
+    <section aria-labelledby="h-rank">
+      <h2 id="h-rank">What matters to you?</h2>
+      <p class="muted">Set the weight of each factor. Lines are re-ranked live.</p>
+      <div class="weights" id="weights"></div>
+      <div class="cards" id="cards"></div>
+    </section>
+
+    <section aria-labelledby="h-route" id="route-section">
+      <div class="route-head">
+        <div>
+          <h2 id="h-route">Route map</h2>
+          <p class="muted" id="route-tagline"></p>
+        </div>
+        <label class="select-line">Line
+          <select id="line-select"></select>
+        </label>
+      </div>
+      <div class="progress" aria-live="polite">
+        <div class="progress-bar"><span id="progress-fill"></span></div>
+        <span id="progress-text"></span>
+      </div>
+      <div class="map-box"><svg id="railway" role="img"></svg></div>
+      <div class="legend">
+        <span><i class="lg lg-station"></i>Station</span>
+        <span><i class="lg lg-junction"></i>Junction (major milestone)</span>
+        <span><i class="lg lg-done"></i>Completed</span>
+        <span>🚆 Your next stop</span>
+      </div>
+
+      <div class="route-detail">
+        <article class="station-panel" id="station-panel" aria-live="polite"></article>
+        <aside class="line-facts" id="line-facts"></aside>
+      </div>
+    </section>
+
+    <section aria-labelledby="h-compare">
+      <h2 id="h-compare">Side-by-side</h2>
+      <div class="table-scroll"><table id="compare"></table></div>
+    </section>
+
+    <p class="disclaimer" id="disclaimer"></p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

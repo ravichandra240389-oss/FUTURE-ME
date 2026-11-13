@@ -1,0 +1,185 @@
+{
+  "profile": {
+    "name": "Ravi Chandra",
+    "title": "Senior Software Engineer · Java Microservices",
+    "yearsOfExperience": 16,
+    "location": "Hyderabad",
+    "skills": ["Java", "Spring", "Kafka", "Microservices architecture", "Oracle DB", "MongoDB", "Maven", "JUnit", "Karate", "Harness", "Helm"]
+  },
+  "asOf": "November 2026",
+  "disclaimer": "Scores and pay ranges are informed estimates for the Indian (Hyderabad/Bengaluru GCC and product-company) and US markets as of late 2026, not live data. Treat them as a starting point and check against current job posts, levels.fyi and recruiter conversations before deciding.",
+  "roadmaps": [
+    {
+      "id": "ai-platform",
+      "title": "AI Platform Engineer (JVM)",
+      "tagline": "Build the production systems that put LLMs and agents to work inside enterprises.",
+      "color": "#7c3aed",
+      "scores": { "demand": 10, "compensation": 9, "aiProof": 8, "irreplaceable": 7 },
+      "compensation": { "india": "₹55–95 LPA", "global": "US $210k–340k" },
+      "whyNow": "Every enterprise with a Java estate is wiring LLMs into it. Data scientists can build a demo; few people can make agents reliable, secure, observable and cheap at scale on Spring. That gap is exactly your 16 years.",
+      "leverage": ["Spring Boot → Spring AI", "Kafka → event-driven agents", "Microservices → tool/MCP servers", "Karate/JUnit → LLM evals", "Helm/Harness → model deployment"],
+      "gaps": ["LLM fundamentals", "Vector search & RAG", "Evaluation methodology", "Python reading fluency"],
+      "targetRoles": ["Staff AI Engineer", "AI Platform Architect", "Principal Engineer – GenAI"],
+      "stations": [
+        { "id": "s0", "name": "Java Microservices Junction", "type": "start", "duration": "You are here", "summary": "16+ years of Spring, Kafka and distributed systems. This is your boarding platform.", "topics": ["Audit your current Spring Boot version and move a service to Boot 4 / Java 25", "List three internal processes at work an LLM could improve"], "milestone": "Write a one-page note on where AI could plug into your current system." },
+        { "id": "s1", "name": "LLM Foundations", "type": "station", "duration": "3 weeks", "summary": "Know how the engine works before you drive it.", "topics": ["Tokens, context windows, temperature and sampling", "Prompting patterns: few-shot, chain-of-thought, structured output", "Model families and trade-offs: frontier vs open-weight vs small", "Cost and latency maths per request", "Hallucination: why it happens and how to contain it"], "milestone": "A CLI that calls two different model APIs and compares cost, latency and answer quality on 20 prompts." },
+        { "id": "s2", "name": "Spring AI & LangChain4j", "type": "station", "duration": "3 weeks", "summary": "Your home framework now speaks LLM.", "topics": ["Spring AI ChatClient, advisors and structured output to records", "LangChain4j AI Services as a comparison", "Streaming responses with WebFlux / SSE", "Prompt templates and versioning", "Retries, timeouts and fallbacks with Resilience4j"], "milestone": "A Spring Boot service that turns free-text support tickets into typed JSON and pushes them to Kafka." },
+        { "id": "s3", "name": "RAG Central", "type": "junction", "duration": "5 weeks", "summary": "Retrieval-augmented generation is the most deployed enterprise AI pattern. Master it.", "topics": ["Embeddings and similarity search", "Vector stores: pgvector, Oracle 23ai Vector Search, MongoDB Atlas Vector Search", "Chunking strategies and metadata filtering", "Hybrid search (BM25 + vectors) and re-ranking", "Ingestion pipelines fed by Kafka / CDC", "Citations and access control on retrieved documents"], "milestone": "A RAG service over your team's Confluence/runbooks with citations, permission filtering and Kafka-driven reindexing." },
+        { "id": "s4", "name": "Agents & MCP", "type": "station", "duration": "4 weeks", "summary": "From chatbots to systems that take actions.", "topics": ["Tool/function calling and its failure modes", "Model Context Protocol: build MCP servers in Java", "Agent loops, planning and human-in-the-loop approvals", "Multi-agent orchestration and when not to use it", "Idempotency and sagas when an agent calls your microservices"], "milestone": "An MCP server exposing three of your existing microservice APIs, used by an agent that needs approval before any write." },
+        { "id": "s5", "name": "Evals & Guardrails", "type": "junction", "duration": "4 weeks", "summary": "Testing is where your Karate/JUnit discipline becomes rare and valuable.", "topics": ["Golden datasets and regression evals in CI", "LLM-as-judge and its biases", "Prompt-injection and data-leak defences", "PII redaction and output validation", "Running evals as a Harness pipeline gate"], "milestone": "An eval suite of 100+ cases that blocks a Harness deploy when answer quality drops." },
+        { "id": "s6", "name": "LLMOps & Cost Control", "type": "station", "duration": "3 weeks", "summary": "Production AI is an operations problem.", "topics": ["Tracing with OpenTelemetry GenAI conventions", "Semantic caching and prompt caching", "Model routing: cheap model first, escalate when needed", "Rate limits, quotas and per-tenant budgets", "Self-hosting open-weight models on Kubernetes (vLLM) via Helm"], "milestone": "A dashboard showing cost, latency and quality per feature, with a router that cuts spend by 40%." },
+        { "id": "s7", "name": "AI Platform Architect", "type": "terminus", "duration": "Destination", "summary": "You own the paved road every team uses to ship AI features safely.", "topics": ["Design an internal AI gateway (auth, routing, logging, guardrails)", "Write the reference architecture and ADRs", "Talk publicly: one blog post or meetup talk on Java + AI in production"], "milestone": "Lead an AI feature from idea to production at work and present the architecture to leadership." }
+      ]
+    },
+    {
+      "id": "distributed-architect",
+      "title": "Principal Distributed Systems Architect",
+      "tagline": "Be the person who designs event-driven systems that do not fall over at 10x scale.",
+      "color": "#dc2626",
+      "scores": { "demand": 8, "compensation": 9, "aiProof": 9, "irreplaceable": 9 },
+      "compensation": { "india": "₹65 LPA–1.1 Cr", "global": "US $230k–380k" },
+      "whyNow": "AI can generate a microservice; it cannot own the trade-offs of consistency, failure and cost across 200 of them. Staff+ architects who have actually run Kafka at scale are scarce, and your experience is the hard-to-copy part.",
+      "leverage": ["Kafka → event streaming at scale", "Microservices → system design authority", "Oracle/Mongo → polyglot persistence decisions", "Production incidents → resilience design"],
+      "gaps": ["Formal consistency models", "Multi-region design", "Written architecture influence", "Cost modelling"],
+      "targetRoles": ["Principal Engineer", "Distinguished Engineer", "Chief/Enterprise Architect"],
+      "stations": [
+        { "id": "s0", "name": "Java Microservices Junction", "type": "start", "duration": "You are here", "summary": "You already design services. Now design the system of systems.", "topics": ["Draw the current architecture of your product end to end", "List the three worst incidents you have seen and their root causes"], "milestone": "An honest C4 diagram of your current system with its weak points marked." },
+        { "id": "s1", "name": "Distributed Systems Theory", "type": "station", "duration": "5 weeks", "summary": "The theory that makes your intuition explainable.", "topics": ["Designing Data-Intensive Applications (Kleppmann), cover to cover", "CAP, PACELC and consistency models (linearizable to eventual)", "Clocks, ordering, vector clocks and hybrid logical clocks", "Consensus: Raft and how KRaft uses it", "Failure modes: partial failure, split brain, gray failure"], "milestone": "Explain to a junior, in writing, why exactly-once in Kafka is really effectively-once." },
+        { "id": "s2", "name": "Kafka Deep Dive", "type": "junction", "duration": "4 weeks", "summary": "Go from user to expert of your strongest tool.", "topics": ["Partitioning strategy, keys and hot partitions", "Transactions, idempotent producers and EOS", "KRaft, tiered storage and cluster sizing", "Schema Registry, Avro/Protobuf and compatibility rules", "Kafka Streams state stores and interactive queries"], "milestone": "A load test that pushes a 3-broker cluster to failure, with a written capacity plan." },
+        { "id": "s3", "name": "Event-Driven Patterns", "type": "station", "duration": "4 weeks", "summary": "The patterns that keep data consistent without distributed transactions.", "topics": ["Event sourcing and CQRS: when they pay off and when they hurt", "Transactional outbox with Debezium", "Sagas: choreography vs orchestration (Temporal)", "Idempotency keys and deduplication", "Event versioning and contract testing"], "milestone": "An order-payment-shipping flow using outbox + saga, with chaos tests proving no lost or double orders." },
+        { "id": "s4", "name": "Resilience & Multi-Region", "type": "station", "duration": "4 weeks", "summary": "Design for the day a region disappears.", "topics": ["Cell-based architecture and blast radius", "Active-active vs active-passive, MirrorMaker 2 / Cluster Linking", "Back-pressure, load shedding and bulkheads", "SLOs, error budgets and graceful degradation", "Chaos engineering game days"], "milestone": "A multi-region design doc with RTO/RPO numbers and a failover runbook." },
+        { "id": "s5", "name": "Architecture Leadership", "type": "junction", "duration": "Ongoing", "summary": "At Principal level, writing and influence matter as much as design.", "topics": ["Architecture Decision Records and RFC process", "Running design reviews that people want to attend", "Cost and FinOps as a design input", "Build vs buy vs open-source evaluations", "Mentoring senior engineers into tech leads"], "milestone": "Drive one cross-team RFC to an accepted decision." },
+        { "id": "s6", "name": "System Design Interviews", "type": "station", "duration": "4 weeks", "summary": "Package your experience for Staff+ loops.", "topics": ["Practice 15 classic designs aloud (payments, feeds, rate limiter, chat)", "Build stories of your past decisions using STAR", "Behavioural loops for Staff+: scope, ambiguity, influence"], "milestone": "Three mock interviews with Staff+ engineers, with feedback recorded." },
+        { "id": "s7", "name": "Principal Architect", "type": "terminus", "duration": "Destination", "summary": "You are the technical conscience of a large engineering organisation.", "topics": ["Own the long-range technical strategy for a domain", "Publish externally: talk, blog or open-source contribution"], "milestone": "A Principal/Staff offer or internal promotion." }
+      ]
+    },
+    {
+      "id": "platform-engineering",
+      "title": "Platform Engineering Lead",
+      "tagline": "Build the internal developer platform that makes 500 engineers fast and safe.",
+      "color": "#0891b2",
+      "scores": { "demand": 9, "compensation": 8, "aiProof": 7, "irreplaceable": 7 },
+      "compensation": { "india": "₹45–85 LPA", "global": "US $190k–300k" },
+      "whyNow": "Companies are consolidating DevOps chaos into platform teams with golden paths. You already ship with Helm and Harness; adding Kubernetes depth, GitOps and platform-as-product thinking makes you a natural lead.",
+      "leverage": ["Helm → Kubernetes packaging", "Harness → delivery pipelines & governance", "Microservices → understand what app teams need", "Maven → build standardisation"],
+      "gaps": ["Kubernetes internals", "Terraform / IaC", "Developer portals", "Product mindset for internal users"],
+      "targetRoles": ["Platform Engineering Lead", "Staff Platform Engineer", "Head of Developer Experience"],
+      "stations": [
+        { "id": "s0", "name": "Java Microservices Junction", "type": "start", "duration": "You are here", "summary": "You have been a platform customer. Now become its builder.", "topics": ["Measure your team's lead time and deploy frequency (DORA)", "List the five biggest friction points developers hit"], "milestone": "A friction log from your own team." },
+        { "id": "s1", "name": "Kubernetes Core", "type": "junction", "duration": "6 weeks", "summary": "Deep, not just kubectl apply.", "topics": ["Pods, controllers, scheduling, requests/limits", "Networking: Services, Ingress/Gateway API, CNI", "Storage, StatefulSets and operators", "RBAC and security contexts", "CKA certification"], "milestone": "Pass the CKA and run a JVM service with proper probes, HPA and PodDisruptionBudgets." },
+        { "id": "s2", "name": "Infrastructure as Code", "type": "station", "duration": "4 weeks", "summary": "Everything versioned, everything reviewable.", "topics": ["Terraform / OpenTofu modules and state", "Crossplane for cloud resources via Kubernetes", "One cloud deeply: AWS or Azure (associate cert)", "Policy as code with OPA / Kyverno"], "milestone": "Terraform modules that create a full environment (cluster, DB, Kafka) from one pull request." },
+        { "id": "s3", "name": "GitOps & Delivery", "type": "station", "duration": "3 weeks", "summary": "From pipelines you use to pipelines you design for everyone.", "topics": ["Argo CD / Flux and the GitOps model", "Progressive delivery: Argo Rollouts, canary, feature flags", "Harness templates and pipeline governance at org scale", "Helm chart libraries and versioning strategy"], "milestone": "A reusable pipeline template with canary analysis that any service adopts in under an hour." },
+        { "id": "s4", "name": "Developer Portal", "type": "junction", "duration": "4 weeks", "summary": "The platform as a product, with a front door.", "topics": ["Backstage: catalog, templates, TechDocs", "Golden paths: Spring Boot service template with everything wired", "Scorecards for production readiness", "Measuring developer experience (SPACE, DX surveys)"], "milestone": "A Backstage template that creates a production-ready Spring Boot service with CI, Helm chart and dashboards." },
+        { "id": "s5", "name": "Observability & SRE", "type": "station", "duration": "4 weeks", "summary": "If you cannot see it, you cannot run it.", "topics": ["OpenTelemetry for JVM: traces, metrics, logs", "Prometheus, Grafana, Loki/Tempo", "SLOs and alerting that respect sleep", "Incident management and blameless postmortems"], "milestone": "Default dashboards and SLO alerts that every new service gets automatically." },
+        { "id": "s6", "name": "AI for Platforms", "type": "station", "duration": "3 weeks", "summary": "Keep the platform ahead of AI, not replaced by it.", "topics": ["AI-assisted incident triage and runbooks", "Platform support for AI workloads: GPUs, model serving", "Coding agents in the paved road, with guardrails"], "milestone": "An assistant that answers 'why did my deploy fail?' from pipeline logs." },
+        { "id": "s7", "name": "Platform Engineering Lead", "type": "terminus", "duration": "Destination", "summary": "You run the platform team and its roadmap.", "topics": ["Platform roadmap driven by developer feedback", "Adoption metrics and internal marketing"], "milestone": "Lead or found a platform team; show a measurable DORA improvement." }
+      ]
+    },
+    {
+      "id": "streaming-data",
+      "title": "Real-Time Data & Streaming Engineer",
+      "tagline": "Turn your Kafka skills into the real-time data backbone that AI products need.",
+      "color": "#ea580c",
+      "scores": { "demand": 8, "compensation": 8, "aiProof": 7, "irreplaceable": 8 },
+      "compensation": { "india": "₹45–85 LPA", "global": "US $190k–310k" },
+      "whyNow": "AI features are only as good as fresh data. Firms are moving from nightly batch to streaming with Flink and lakehouses. Kafka experts who also understand data modelling are in short supply.",
+      "leverage": ["Kafka → streaming platform core", "Oracle → CDC source expertise", "MongoDB → document change streams", "Java → Flink is JVM-native"],
+      "gaps": ["Stream processing semantics", "Lakehouse formats", "SQL-heavy analytics", "Data quality & governance"],
+      "targetRoles": ["Staff Data Engineer – Streaming", "Streaming Platform Architect", "Data Platform Lead"],
+      "stations": [
+        { "id": "s0", "name": "Java Microservices Junction", "type": "start", "duration": "You are here", "summary": "Your Kafka experience is a ticket most data engineers do not have.", "topics": ["Map every Kafka topic in your system and who consumes it", "Note which reports or features still run on nightly batch"], "milestone": "A list of three batch jobs that should be real time." },
+        { "id": "s1", "name": "Kafka Streams & ksqlDB", "type": "station", "duration": "3 weeks", "summary": "Process in the stream, not after it.", "topics": ["KStream vs KTable, joins and windowing", "State stores and changelog topics", "Exactly-once processing", "Testing with TopologyTestDriver"], "milestone": "A real-time fraud-score stream joining payments with customer profiles." },
+        { "id": "s2", "name": "Apache Flink", "type": "junction", "duration": "6 weeks", "summary": "The engine that has become the standard for stateful streaming.", "topics": ["DataStream API in Java", "Event time, watermarks and late data", "Checkpoints, savepoints and state backends", "Flink SQL and the Table API", "Running Flink on Kubernetes with the operator"], "milestone": "A Flink job computing per-minute metrics from Kafka with correct handling of late events." },
+        { "id": "s3", "name": "CDC & Integration", "type": "station", "duration": "3 weeks", "summary": "Unlock data trapped in Oracle and MongoDB.", "topics": ["Debezium for Oracle (LogMiner) and MongoDB", "Kafka Connect: sinks, sources, SMTs", "Schema evolution in pipelines", "Handling snapshots and backfills"], "milestone": "Stream Oracle table changes into a search index with under 5 seconds of lag." },
+        { "id": "s4", "name": "Lakehouse", "type": "junction", "duration": "5 weeks", "summary": "Streaming meets analytics.", "topics": ["Apache Iceberg tables, snapshots and time travel", "Writing Iceberg from Flink / Kafka (Tableflow-style)", "Query engines: Trino, Spark SQL", "Data modelling: star schema, data vault, medallion layers"], "milestone": "A pipeline from Kafka to Iceberg queried by Trino, with a dashboard on top." },
+        { "id": "s5", "name": "Data for AI", "type": "station", "duration": "3 weeks", "summary": "The fresh-data supply chain for ML and LLM features.", "topics": ["Feature stores and online/offline consistency", "Streaming embeddings into vector stores", "Data contracts and quality checks", "Lineage and governance (OpenLineage)"], "milestone": "A streaming pipeline that keeps a RAG index fresh within a minute of source changes." },
+        { "id": "s6", "name": "Streaming Platform Architect", "type": "terminus", "duration": "Destination", "summary": "You own the company's real-time data platform.", "topics": ["Multi-tenant Kafka/Flink platform design", "Cost and retention strategy", "Confluent or Databricks certification as a signal"], "milestone": "Lead a batch-to-streaming migration that a business team relies on." }
+      ]
+    },
+    {
+      "id": "modernization",
+      "title": "Legacy Modernization Architect",
+      "tagline": "Lead banks and enterprises off decades-old systems, with AI agents doing the heavy lifting.",
+      "color": "#16a34a",
+      "scores": { "demand": 9, "compensation": 8, "aiProof": 8, "irreplaceable": 9 },
+      "compensation": { "india": "₹50–90 LPA", "global": "US $180k–300k" },
+      "whyNow": "Hyderabad's GCCs hold huge Java 8, Oracle and mainframe estates. AI coding agents make large migrations affordable for the first time, but someone who knows both old and new must direct them, check the results and manage risk. Domain plus legacy knowledge is very hard to replace.",
+      "leverage": ["Oracle DB → data migration authority", "Java/Spring → target platform", "Microservices → strangler-fig decomposition", "Karate/JUnit → characterisation tests"],
+      "gaps": ["Automated refactoring tools", "Domain-driven design depth", "Business-case writing", "Mainframe basics"],
+      "targetRoles": ["Modernization Architect", "Principal Consultant", "Head of Application Modernization"],
+      "stations": [
+        { "id": "s0", "name": "Java Microservices Junction", "type": "start", "duration": "You are here", "summary": "You have lived through monolith-to-microservices. That story is worth money.", "topics": ["Write down a migration you were part of: what worked, what failed", "Pick a business domain to specialise in (banking, insurance, retail)"], "milestone": "A two-page case study of a past migration." },
+        { "id": "s1", "name": "Domain-Driven Design", "type": "junction", "duration": "4 weeks", "summary": "Find the right seams before you cut.", "topics": ["Bounded contexts and context mapping", "Event storming workshops", "Aggregates and invariants", "Team Topologies and Conway's law"], "milestone": "Run an event-storming session on a real legacy module." },
+        { "id": "s2", "name": "Migration Patterns", "type": "station", "duration": "4 weeks", "summary": "Change the plane's engines in flight.", "topics": ["Strangler fig and branch by abstraction", "Anti-corruption layers", "Parallel run and dark launching", "Database decomposition: shared DB to owned data", "Oracle to PostgreSQL migration techniques"], "milestone": "A strangler-fig plan with phases, rollback points and data sync strategy." },
+        { "id": "s3", "name": "Automated Refactoring", "type": "station", "duration": "3 weeks", "summary": "Recipes that upgrade a thousand repos at once.", "topics": ["OpenRewrite recipes: Java 8 → 21/25, Spring Boot 2 → 4", "Writing custom OpenRewrite recipes", "Jakarta EE namespace migrations", "Characterisation tests before touching legacy code"], "milestone": "Upgrade a real legacy service to Java 25 / Boot 4 with OpenRewrite and a green test suite." },
+        { "id": "s4", "name": "AI-Assisted Migration", "type": "junction", "duration": "5 weeks", "summary": "Direct coding agents across a whole codebase, safely.", "topics": ["Coding agents for large refactors: planning, batching, verification", "Generating tests for untested legacy code", "Understanding legacy code with AI: COBOL/PL-SQL explanation", "Review workflows and guardrails for AI-written changes", "Measuring migration velocity and defect rate"], "milestone": "Migrate a module with AI agents and publish before/after metrics on effort and defects." },
+        { "id": "s5", "name": "Business & Risk", "type": "station", "duration": "3 weeks", "summary": "Modernization is sold to CFOs, not engineers.", "topics": ["Business cases: cost of delay, TCO, risk reduction", "Regulatory concerns (RBI, PCI-DSS, data residency)", "Stakeholder management and steering committees", "Vendor and partner evaluation"], "milestone": "A business case deck for a modernization programme." },
+        { "id": "s6", "name": "Modernization Architect", "type": "terminus", "duration": "Destination", "summary": "You lead multi-year programmes with real budgets.", "topics": ["Build a repeatable modernization playbook", "Speak at an industry event on AI-assisted migration"], "milestone": "Lead a modernization programme or join a GCC/consultancy as its modernization lead." }
+      ]
+    },
+    {
+      "id": "security",
+      "title": "Application Security & DevSecOps Architect",
+      "tagline": "Secure Java systems, software supply chains and the new attack surface AI opens.",
+      "color": "#ca8a04",
+      "scores": { "demand": 9, "compensation": 8, "aiProof": 9, "irreplaceable": 8 },
+      "compensation": { "india": "₹45–85 LPA", "global": "US $190k–320k" },
+      "whyNow": "Supply-chain attacks, stricter regulation and AI agents with access to production have made security a board-level concern. Security engineers who can actually read and fix Java code are rare, and accountability for security cannot be handed to a model.",
+      "leverage": ["Spring → Spring Security expertise", "Maven → dependency & supply-chain risk", "Harness/Helm → secure pipelines", "Microservices → zero-trust service mesh"],
+      "gaps": ["Threat modelling", "Offensive testing basics", "Cryptography fundamentals", "Compliance frameworks"],
+      "targetRoles": ["AppSec Architect", "Staff Security Engineer", "DevSecOps Lead"],
+      "stations": [
+        { "id": "s0", "name": "Java Microservices Junction", "type": "start", "duration": "You are here", "summary": "Builders make the best defenders.", "topics": ["Run a dependency scan on your main service and read the report", "List where secrets live in your current setup"], "milestone": "A security debt list for your own system." },
+        { "id": "s1", "name": "Secure Coding & OWASP", "type": "station", "duration": "4 weeks", "summary": "Learn how attackers think about your code.", "topics": ["OWASP Top 10 and API Security Top 10", "Injection, SSRF, deserialization in Java", "Hands-on labs: PortSwigger Web Security Academy", "Secure code review checklists"], "milestone": "Find and fix five real vulnerabilities in a deliberately vulnerable Spring app." },
+        { "id": "s2", "name": "Identity & Zero Trust", "type": "junction", "duration": "4 weeks", "summary": "Who is calling, and should they be?", "topics": ["OAuth 2.1, OIDC, PKCE, token exchange", "Spring Authorization Server and Spring Security 7", "mTLS and service mesh identity (SPIFFE)", "Fine-grained authorisation: OPA, Cedar, ReBAC"], "milestone": "Service-to-service auth with mTLS plus fine-grained authorisation across three services." },
+        { "id": "s3", "name": "Supply Chain Security", "type": "station", "duration": "3 weeks", "summary": "Your Maven dependencies are an attack surface.", "topics": ["SBOMs (CycloneDX) and vulnerability management", "Sigstore signing, SLSA levels and provenance", "Container image hardening and scanning", "Secrets management: Vault, external secrets"], "milestone": "A Harness pipeline that signs images, produces SBOMs and blocks critical CVEs." },
+        { "id": "s4", "name": "Threat Modelling", "type": "junction", "duration": "3 weeks", "summary": "Find the design flaws scanners never will.", "topics": ["STRIDE and attack trees", "Data-flow diagrams for microservices", "Risk rating and prioritisation", "Security architecture reviews"], "milestone": "Threat model a payment flow and present mitigations to the team." },
+        { "id": "s5", "name": "AI Security", "type": "station", "duration": "4 weeks", "summary": "The fastest-growing niche in security.", "topics": ["OWASP Top 10 for LLM applications", "Prompt injection, data exfiltration via tools, excessive agency", "Securing MCP servers and agent permissions", "Red-teaming LLM features"], "milestone": "Red-team an internal LLM feature and write the findings report." },
+        { "id": "s6", "name": "Certifications", "type": "station", "duration": "8 weeks", "summary": "Signals that open security doors.", "topics": ["CSSLP or OSWE (application focus)", "CKS for Kubernetes security", "Cloud security specialty (AWS/Azure)"], "milestone": "One security certification earned." },
+        { "id": "s7", "name": "AppSec Architect", "type": "terminus", "duration": "Destination", "summary": "You set the security bar for engineering.", "topics": ["Run a security champions programme", "Own secure-by-default templates for all services"], "milestone": "Move into an AppSec/DevSecOps lead role." }
+      ]
+    },
+    {
+      "id": "performance",
+      "title": "JVM Performance & Reliability Engineer",
+      "tagline": "The specialist teams call when latency, GC pauses or cloud bills get out of hand.",
+      "color": "#db2777",
+      "scores": { "demand": 7, "compensation": 8, "aiProof": 8, "irreplaceable": 9 },
+      "compensation": { "india": "₹45–80 LPA", "global": "US $190k–300k" },
+      "whyNow": "Cloud cost pressure and low-latency AI serving put performance back in focus. Deep JVM knowledge is niche, hard to learn quickly and much harder to automate than writing CRUD services.",
+      "leverage": ["16 years of Java → JVM intuition", "Kafka → throughput tuning", "Oracle/Mongo → query and index tuning", "Production support → diagnosis instinct"],
+      "gaps": ["JVM internals", "Profiling tools", "Linux performance", "Benchmarking rigour"],
+      "targetRoles": ["Performance Architect", "Staff SRE", "JVM Specialist"],
+      "stations": [
+        { "id": "s0", "name": "Java Microservices Junction", "type": "start", "duration": "You are here", "summary": "Every slow incident you fixed was training for this.", "topics": ["Find the slowest endpoint in your system and its p99", "Check your services' GC logs and heap settings"], "milestone": "A baseline latency and cost report for one service." },
+        { "id": "s1", "name": "JVM Internals", "type": "junction", "duration": "5 weeks", "summary": "Know what the JVM does with your code.", "topics": ["JIT compilation, inlining and escape analysis", "Garbage collectors: G1, ZGC (generational), Shenandoah", "Memory model, happens-before and safe publication", "Class loading and startup: CDS, AOT cache (Project Leyden)"], "milestone": "Cut p99 latency of a service by tuning the GC and explain why it worked." },
+        { "id": "s2", "name": "Modern Concurrency", "type": "station", "duration": "3 weeks", "summary": "Java 21–25 changed the concurrency game.", "topics": ["Virtual threads and pinning", "Structured concurrency and scoped values", "Reactive vs virtual threads: when each wins", "Lock contention analysis"], "milestone": "Migrate a thread-pool service to virtual threads and benchmark before and after." },
+        { "id": "s3", "name": "Profiling & Benchmarking", "type": "station", "duration": "4 weeks", "summary": "Measure, do not guess.", "topics": ["JFR and JDK Mission Control", "async-profiler and flame graphs", "JMH micro-benchmarks done correctly", "Load testing with Gatling / k6"], "milestone": "A performance regression test that runs in CI." },
+        { "id": "s4", "name": "Native & Startup", "type": "station", "duration": "3 weeks", "summary": "Fast startup and small footprints for cloud and serverless.", "topics": ["GraalVM native image with Spring Boot", "CRaC checkpoint/restore", "Container memory sizing for the JVM"], "milestone": "A native-image build that cuts memory by 60% with a written trade-off analysis." },
+        { "id": "s5", "name": "SRE & FinOps", "type": "junction", "duration": "4 weeks", "summary": "Reliability and cost as engineering disciplines.", "topics": ["SLOs, error budgets and capacity planning", "Linux performance: CPU, memory, I/O, eBPF tools", "Kubernetes right-sizing and autoscaling", "Cloud cost attribution and optimisation"], "milestone": "Save a measurable amount of cloud spend at work and document it." },
+        { "id": "s6", "name": "Performance Architect", "type": "terminus", "duration": "Destination", "summary": "The person whose name comes up when something is slow.", "topics": ["Build a performance engineering practice", "Write publicly about JVM tuning case studies"], "milestone": "Own performance for a critical platform." }
+      ]
+    },
+    {
+      "id": "eng-leadership",
+      "title": "Engineering Manager → Director",
+      "tagline": "Multiply impact through people, with AI-augmented teams.",
+      "color": "#2563eb",
+      "scores": { "demand": 7, "compensation": 9, "aiProof": 9, "irreplaceable": 8 },
+      "compensation": { "india": "₹60 LPA–1.2 Cr", "global": "US $220k–400k" },
+      "whyNow": "As AI makes individual coding cheaper, leaders who can reshape teams, judge quality and own outcomes become more valuable. Senior engineers with deep technical credibility make the most trusted managers in GCCs.",
+      "leverage": ["16 years of delivery → credibility", "Architecture → technical judgement", "Mentoring juniors → people development", "Cross-team Kafka contracts → stakeholder skill"],
+      "gaps": ["People management", "Hiring & performance reviews", "Budgeting", "Business strategy"],
+      "targetRoles": ["Engineering Manager", "Senior EM", "Director of Engineering"],
+      "stations": [
+        { "id": "s0", "name": "Java Microservices Junction", "type": "start", "duration": "You are here", "summary": "Decide deliberately: manager track or Staff+ IC track. Both are good.", "topics": ["Read 'The Manager's Path' (Fournier)", "Talk to two EMs and two Principal engineers about their week"], "milestone": "A written decision on IC vs manager, with reasons." },
+        { "id": "s1", "name": "Tech Lead", "type": "station", "duration": "3–6 months", "summary": "Lead the work before you lead the people.", "topics": ["Planning and estimation for a team", "Running stand-ups, retros and design reviews", "Delegation without losing quality", "Unblocking others as your main job"], "milestone": "Lead a quarter-long project as tech lead." },
+        { "id": "s2", "name": "People Management", "type": "junction", "duration": "6 months", "summary": "The core of the job.", "topics": ["1:1s that matter", "Feedback models (SBI) and difficult conversations", "Performance reviews and promotions", "Hiring: structured interviews and calibration"], "milestone": "Manage 4–6 engineers with regular 1:1s and a growth plan for each." },
+        { "id": "s3", "name": "Delivery & Metrics", "type": "station", "duration": "3 months", "summary": "Outcomes over output.", "topics": ["DORA and SPACE metrics", "OKRs and roadmap planning", "Risk management and dependency tracking", "Stakeholder communication with product and business"], "milestone": "A quarterly plan with OKRs that your team hits." },
+        { "id": "s4", "name": "AI-Augmented Teams", "type": "station", "duration": "2 months", "summary": "Redesign how your team works with AI tools.", "topics": ["Rolling out coding agents with quality guardrails", "Changing review and testing practices for AI-written code", "Reskilling plans for the team", "Measuring productivity honestly"], "milestone": "An AI adoption plan with before/after delivery metrics." },
+        { "id": "s5", "name": "Org Leadership", "type": "junction", "duration": "1–2 years", "summary": "Managing managers.", "topics": ["Org design and team topologies", "Budget and headcount planning", "Building culture and retaining talent", "Executive communication"], "milestone": "Lead a group of 2–4 teams." },
+        { "id": "s6", "name": "Director of Engineering", "type": "terminus", "duration": "Destination", "summary": "You own a business area's engineering.", "topics": ["Engineering strategy tied to business goals", "Build a leadership bench beneath you"], "milestone": "Director role at a GCC or product company." }
+      ]
+    }
+  ]
+}
