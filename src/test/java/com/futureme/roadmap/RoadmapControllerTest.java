@@ -1,7 +1,9 @@
 package com.futureme.roadmap;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.Matchers.containsString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -44,6 +46,9 @@ class RoadmapControllerTest {
 
     @Test
     void servesTheSite() throws Exception {
-        mvc.perform(get("/index.html")).andExpect(status().isOk());
+        mvc.perform(get("/index.html"))
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("class=\"site-header\"")))
+                .andExpect(content().string(containsString("<footer class=\"site-footer\"")));
     }
 }

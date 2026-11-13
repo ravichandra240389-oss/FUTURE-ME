@@ -112,6 +112,30 @@ function renderProfile() {
   $("#disclaimer").textContent = state.catalog.disclaimer;
 }
 
+/* ---------- footer ---------- */
+function renderFooter() {
+  $("#as-of").textContent = `Data as of ${state.catalog.asOf}.`;
+  $("#footer-factors").replaceChildren(
+    ...FACTORS.map((f) => el("li", {}, el("b", {}, f.label), `: ${f.hint.toLowerCase()}`)));
+}
+
+/* ---------- header nav: mark the section in view ---------- */
+function watchSections() {
+  if (!("IntersectionObserver" in window)) return;
+  const links = new Map(
+    [...document.querySelectorAll(".nav a")].map((a) => [a.getAttribute("href").slice(1), a]));
+  const observer = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (!e.isIntersecting) continue;
+      links.forEach((a, id) => {
+        if (id === e.target.id) a.setAttribute("aria-current", "true");
+        else a.removeAttribute("aria-current");
+      });
+    }
+  }, { rootMargin: "-40% 0px -55% 0px" });
+  links.forEach((_, id) => { const s = document.getElementById(id); if (s) observer.observe(s); });
+}
+
 /* ---------- network map ---------- */
 function renderNetwork() {
   const box = $("#network");
@@ -469,6 +493,7 @@ function renderCompare() {
 
 /* ---------- boot ---------- */
 async function boot() {
+  watchSections();
   try {
     const res = await fetch("/api/catalog");
     if (!res.ok) throw new Error(`API returned ${res.status}`);
@@ -482,6 +507,7 @@ async function boot() {
   state.progress = load(PROGRESS_KEY, {});
 
   renderProfile();
+  renderFooter();
   renderWeights();
   renderCards();
   const fromHash = /line=([\w-]+)/.exec(location.hash)?.[1];
