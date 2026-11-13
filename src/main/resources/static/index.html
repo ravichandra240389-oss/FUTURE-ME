@@ -8,23 +8,37 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="wrap">
-      <p class="eyebrow">Future Me · Career Railway Network</p>
-      <h1>Pick your line. Ride it station by station.</h1>
-      <p class="lede" id="profile-line">Loading profile…</p>
-      <ul class="chips" id="skills"></ul>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="#top"><span aria-hidden="true">🚆</span> Future Me</a>
+      <nav aria-label="Sections">
+        <ul class="nav">
+          <li><a href="#network-section">Network</a></li>
+          <li><a href="#rank-section">Rank</a></li>
+          <li><a href="#route-section">Route map</a></li>
+          <li><a href="#compare-section">Compare</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
+  <section class="hero" id="top" aria-labelledby="h-hero">
+    <div class="wrap">
+      <p class="eyebrow">Future Me · Career Railway Network</p>
+      <h1 id="h-hero">Pick your line. Ride it station by station.</h1>
+      <p class="lede" id="profile-line">Loading profile…</p>
+      <ul class="chips" id="skills"></ul>
+    </div>
+  </section>
+
   <main class="wrap">
-    <section aria-labelledby="h-network">
+    <section aria-labelledby="h-network" id="network-section">
       <h2 id="h-network">The network</h2>
       <p class="muted">Every line starts from where you are today. Click a terminus to open its route.</p>
       <div class="network-box"><svg id="network" role="img" aria-label="Network map of all career lines"></svg></div>
     </section>
 
-    <section aria-labelledby="h-rank">
+    <section aria-labelledby="h-rank" id="rank-section">
       <h2 id="h-rank">What matters to you?</h2>
       <p class="muted">Set the weight of each factor. Lines are re-ranked live.</p>
       <div class="weights" id="weights"></div>
@@ -59,13 +73,39 @@
       </div>
     </section>
 
-    <section aria-labelledby="h-compare">
+    <section aria-labelledby="h-compare" id="compare-section">
       <h2 id="h-compare">Side-by-side</h2>
       <div class="table-scroll"><table id="compare"></table></div>
     </section>
-
-    <p class="disclaimer" id="disclaimer"></p>
   </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="brand"><span aria-hidden="true">🚆</span> Future Me</p>
+        <p class="muted">A career railway for a senior Java microservices engineer. Each line is an
+          in-demand career path, scored and drawn station by station from where you are today
+          to the role you are aiming for.</p>
+      </div>
+      <div>
+        <h2 class="footer-h">How to read the map</h2>
+        <ul class="footer-list">
+          <li><b>Line</b>: one career path</li>
+          <li><b>Station</b>: a step with topics to learn</li>
+          <li><b>Junction</b>: a major milestone</li>
+          <li><b>Terminus</b>: the target role</li>
+        </ul>
+        <p class="muted">Each line is scored 1–10 on:</p>
+        <ul class="footer-list" id="footer-factors"></ul>
+      </div>
+      <div>
+        <h2 class="footer-h">About the data</h2>
+        <p id="as-of"></p>
+        <p class="disclaimer" id="disclaimer"></p>
+        <p><a href="/api/catalog">Raw data (JSON)</a></p>
+      </div>
+    </div>
+  </footer>
 
   <script src="app.js"></script>
 </body>
